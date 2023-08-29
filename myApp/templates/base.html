@@ -1,0 +1,17 @@
+<!-- Esto es un comentario en html -->
+<!-- DTL -> Django Template Language -->
+
+<!-- Filtro 'upper' pone en MAYUSCULAS -->
+<!-- Filtro 'default' pone un valor por defecto -->
+<!-- Filtro 'length' nos pone la longitud -->
+<!-- Filtro 'truncatechars' nos trunca el valor a donde le indiquemos -->
+{# esto es un comentario #}
+<div>
+    <h1>
+        Bienvenido {{ nombre|upper|default:"Sin nombre" }} mas cosaas
+
+        Mi apellido {{ apellido }} tiene {{ apellido|length }}
+
+        Mi apellido es {{ apellido|truncatechars:5 }}
+        </h1>
+</div>

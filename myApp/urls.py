@@ -13,5 +13,5 @@ urlpatterns = [
     path("despedida/", despedida),
     path("", bienvenida),
     path("saludo/", saludo),
-    path("saludo/<str:nombre>", saludar_con_nombre),
+    path("saludo/<str:nombre>/", saludar_con_nombre),
 ]
