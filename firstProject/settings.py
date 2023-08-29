@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print("BASE_DIR", BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Custom app
+    "myApp",
 ]
 
 MIDDLEWARE = [
@@ -52,10 +55,13 @@ MIDDLEWARE = [
 # Rutas de nuestro backend
 ROOT_URLCONF = "firstProject.urls"
 
+print("direccion de templates", os.path.join(BASE_DIR, "myApp", "templates"))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            os.path.join(BASE_DIR, "myApp", "templates")
+        ],  # Donde van a estar nuestros templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
