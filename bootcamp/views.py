@@ -10,9 +10,24 @@ def list_koders(request):
     context = {
         "bootcamp": {"name": "Python", "module": "Django"},
         "koders": [
-            {"name": "Benjamin", "generation": "1g", "bootcamp": "Python"},
-            {"name": "Luis", "generation": "1g", "bootcamp": "Python"},
-            {"name": "Irving", "generation": "1g", "bootcamp": "Python"},
+            {
+                "name": "Benjamin",
+                "generation": "1g",
+                "bootcamp": "Python",
+                "is_active": True,
+            },
+            {
+                "name": "Luis",
+                "generation": "1g",
+                "bootcamp": "Python",
+                "is_active": True,
+            },
+            {
+                "name": "Irving",
+                "generation": "1g",
+                "bootcamp": "Python",
+                "is_active": False,
+            },
         ],
     }
 
