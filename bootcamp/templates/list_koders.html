@@ -1,0 +1,18 @@
+<!-- Div -> caja -->
+<!-- P -> parrafo -->
+<div style="border: 1px solid green;">
+  {% for koder in koders %}
+    <!-- Aqui dentro se está iterando el for -->
+    <p>name: {{ koder.name }}</p>
+    <p>generation: {{ koder.generation }}</p>
+    <p>bootcamp: {{ koder.bootcamp }}</p>
+
+    <!-- Tag del IF -->
+    {% if koder.is_active %}
+      <p style="color: green"> Esta activo: {{ koder.is_active }}<p>
+    {% else %}
+      <p style="color: red"> Esta activo: {{ koder.is_active }}<p>
+    {% endif %}
+  {% endfor %}
+  <!-- Aqui fuera es afuera del for -->
+</div>

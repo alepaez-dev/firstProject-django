@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Importar HttpResponse
 from django.http import HttpResponse
-
+from django.template import loader
 
 # Las vistas son funciones
 
@@ -24,4 +24,10 @@ def saludo(request):
 
 
 def saludar_con_nombre(request, nombre):
-    return HttpResponse(f"Hola {nombre}")
+    context = {
+        # "nombre": nombre,
+        "apellido": "Hernandez",
+    }  # Va a servir para pasarle info al template
+    # /Users/all3hp/Documents/Kodemia/1g-master-django/Django/firstProject/myApp/templates/base.html
+    template = loader.get_template("myApp/templates/base.html")
+    return HttpResponse(template.render(context, request))
