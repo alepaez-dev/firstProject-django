@@ -55,7 +55,6 @@ MIDDLEWARE = [
 # Rutas de nuestro backend
 ROOT_URLCONF = "firstProject.urls"
 
-print("direccion de templates", os.path.join(BASE_DIR, "myApp", "templates"))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
