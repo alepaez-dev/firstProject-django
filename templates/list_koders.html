@@ -1,0 +1,16 @@
+<!-- TEMPLATE HIJO, HEREDA DE base.html -->
+{% extends "templates/base.html" %}
+
+<!-- Bloque dinamico hijo -->
+{% block title %}
+<h2> Esto es el TITULO en el hijo LIST KODERS</h2>
+{% endblock title %}
+
+{% block content %}
+  {% for koder in koders %}
+    <span> Name: {{koder.name}} </span>
+    <span> Generation: {{koder.generation}} </span>
+    <span> Bootcamp: {{koder.bootcamp}} </span>
+    <span> Is Active: {{koder.is_active}} </span>
+  {% endfor %}
+{% endblock content %}
