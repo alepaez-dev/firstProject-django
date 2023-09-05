@@ -2,5 +2,5 @@
 2 - Van a aplicar el script ./script_ejercicio.py en su shell de ORM
 3 - Hacer el siguiente script_ejercicio
 
-Ejercicios
+Ejercicios de queries
 1 - Bootcamp donde esten los koders donde su apellido contenga 'ez'
