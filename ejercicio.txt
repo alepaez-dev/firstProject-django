@@ -1,0 +1,6 @@
+1 - Limpiar su base de datos
+2 - Van a aplicar el script ./script_ejercicio.py en su shell de ORM
+3 - Hacer el siguiente script_ejercicio
+
+Ejercicios
+1 - Bootcamp donde esten los koders donde su apellido contenga 'ez'

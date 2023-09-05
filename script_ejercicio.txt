@@ -1,0 +1,34 @@
+from bootcamp.models import Bootcamp, Generation, Mentor, Koder
+Bootcamp.objects.create(name="python")
+Bootcamp.objects.create(name="javascript")
+bootcamp_py = Bootcamp.objects.all()[0]
+bootcamp_js = Bootcamp.objects.all()[1]
+gen_js_1 = Generation.objects.create(number=1, bootcamp=bootcamp_js)
+gen_js_2 = Generation.objects.create(number=2, bootcamp=bootcamp_js)
+gen_py_1 = Generation.objects.create(number=1, bootcamp=bootcamp_py)
+gen_py_2 = Generation.objects.create(number=2, bootcamp=bootcamp_py)
+
+mentor1 = Mentor.objects.create(first_name="Alfredo", last_name="Altamirano", email="alfred@kodemia.mx", phone= "+52 1111 1111")
+mentor2 = Mentor.objects.create(first_name="Ale", last_name="Paez", email="ale@kodemia.mx", phone= "+52 1111 1112")
+mentor3 = Mentor.objects.create(first_name="Charles", last_name="Silva", email="charles@kodemia.mx", phone= "+52 1111 1113")
+
+mentor1.generations.add(gen_js_1)
+mentor1.generations.add(gen_js_2)
+mentor2.generations.add(gen_js_1)
+mentor2.generations.add(gen_py_1)
+mentor2.generations.add(gen_py_1)
+mentor3.generations.add(gen_py_2)
+mentor3.generations.add(gen_py_2)
+mentor3.generations.add(gen_js_1)
+mentor3.generations.add(gen_js_2)
+
+koder1 = Koder.objects.create(first_name="Miren", last_name="Llamas", email="miren@gmail.com", phone="+52 2222 2222", generation=gen_py_1)
+koder2 = Koder.objects.create(first_name="Rodrigo", last_name="Zavala", email="rodrigo@gmail.com", phone="+52 2222 2223", generation=gen_py_2)
+koder3 = Koder.objects.create(first_name="Paquito", last_name="Rivera", email="paquito@gmail.com", phone="+52 2222 2224", generation=gen_js_1)
+koder4 = Koder.objects.create(first_name="Luis", last_name="Candaudap", email="luis@gmail.com", phone="+52 2222 2225", generation=gen_js_2)
+koder5 = Koder.objects.create(first_name="Juan", last_name="Rivera", email="juan@gmail.com", phone="+52 2222 2226", generation=gen_py_1)
+koder6 = Koder.objects.create(first_name="Irving", last_name="Hdez", email="irving@gmail.com", phone="+52 2222 2227", generation=gen_py_2)
+koder7 = Koder.objects.create(first_name="Benjamin", last_name="Lopez", email="benjamin@gmail.com", phone="+52 2222 2228", generation=gen_js_1)
+koder8 = Koder.objects.create(first_name="Alex", last_name="Lopez", email="alex@gmail.com", phone="+52 2222 2229", generation=gen_py_1)
+
+
