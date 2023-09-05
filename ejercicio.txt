@@ -6,3 +6,7 @@ Ejercicios de queries py
 1 - Bootcamp donde esten los koders donde su apellido contenga 'ez'
 2 - Query del ejercicio 1 pero SIN DUPLICADOS
   Resultado esperado -> <QuerySet [<Bootcamp: python>, <Bootcamp: javascript>]>
+
+Tarea
+3 - Mostrarle a un mentor a todos los koders de las generaciones a las que pertenece
+4 -  Mostrar todos los koders, excepto los que pertenezcan a el ultimo bootcamp creado
