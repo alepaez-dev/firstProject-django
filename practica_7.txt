@@ -6,8 +6,8 @@ DB DIAGRAM -> https://dbdiagram.io/d/64f35b9c02bd1c4a5eda2643
 - Los pacientes tendran first_name, last_name, birthdate, email, phone, biography, address, created_at.
 - Las citas contienen una fecha, titulo, paciente y un psicologo(hacer las relaciones necesarias)
 - Crear respectivos psicologos, pacientes y citas con el ORM.
-- Hacer las rutas con sus respectivas vistas y templates
-1. list_psychologist
+- Hacer las rutas con sus respectivas vistas y templates y mostrar datos de la BD por medio del ORM
+1. list_psychologists
 2. get_psychologist
 3. list_patients
 4. get_patient
