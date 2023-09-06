@@ -26,6 +26,8 @@ from django.db import models
 #  N mentors - N generations
 #  1 bootcamp - N generations
 
+# Todos los mentores que esten en el bootcamp de 'python'
+
 
 class Bootcamp(models.Model):
     """Bootcamp model."""
@@ -59,7 +61,7 @@ class Koder(models.Model):
         ("finished", "Finished"),
     ]
 
-    first_name = models.CharField(max_length=255)  # -> string
+    first_name = models.CharField(max_length=254)  # -> string
     last_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=25)

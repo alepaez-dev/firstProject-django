@@ -10,9 +10,18 @@ from bootcamp.models import Koder
 
 
 def list_koders(request):
-    koders = Koder.objects.all()
-
-    return HttpResponse(koders)
+    context = {
+        "koders": [
+            {
+                "name": "Ale",
+                "is_active": True,
+                "generation": "1g",
+                "bootcamp": "Python",
+            }
+        ]
+    }
+    template = loader.get_template("templates/list_koders.html")
+    return HttpResponse(template.render(context, request))
 
 
 def get_koder(request, id):
